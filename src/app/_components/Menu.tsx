@@ -22,74 +22,76 @@ import { Separator } from '@/components/ui/separator'
 
 export function Menu() {
   return (
-    <header className="w-custom-840 flex justify-center mb-4 border-solid border border-border rounded-lg shadow-custom-light">
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem className="my-1">
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <HomeIcon className="pr-1 mr-1" /> Início
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
+    <header className="flex justify-center">
+      <nav className="w-custom-840 flex justify-center mt-5 mb-3 py-1 border-solid border border-border rounded-lg shadow-custom-light">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem className="my-1">
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <HomeIcon className="pr-1 mr-1" /> Início
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <Separator orientation="vertical" className="h-7" />
+            <Separator orientation="vertical" className="h-7" />
 
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <PersonIcon className="pr-1 mr-1" /> Sobre mim
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <PersonIcon className="pr-1 mr-1" /> Sobre mim
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <Separator orientation="vertical" className="h-7" />
+            <Separator orientation="vertical" className="h-7" />
 
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <RocketIcon className="pr-1 mr-1" />
-                Tecnologias
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <RocketIcon className="pr-1 mr-1" />
+                  Tecnologias
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <Separator orientation="vertical" className="h-7" />
+            <Separator orientation="vertical" className="h-7" />
 
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <ReaderIcon className="pr-1 mr-1" /> Certificados
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <ReaderIcon className="pr-1 mr-1" /> Certificados
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <Separator orientation="vertical" className="h-7" />
+            <Separator orientation="vertical" className="h-7" />
 
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <EnvelopeClosedIcon className="pr-1 mr-1" />
-                Contato
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <EnvelopeClosedIcon className="pr-1 mr-1" />
+                  Contato
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
 
-          <Separator orientation="vertical" className="h-7" />
+            <Separator orientation="vertical" className="h-7" />
 
-          <NavigationMenuItem className="relative">
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <GitHubLogoIcon className="pr-1 mr-1 " />
-                Portfólio
-                <Badge className="absolute -top-3.5 right-0.5 rounded-full px-1 shadow-none text-xs">
-                  🔥
-                </Badge>
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+            <NavigationMenuItem className="relative">
+              <Link href="/" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <GitHubLogoIcon className="pr-1 mr-1 " />
+                  Portfólio
+                  <Badge className="absolute -top-2 -right-0.5 rounded-full px-1 shadow-none text-xs hover:bg-primary">
+                    🔥
+                  </Badge>
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </nav>
     </header>
   )
 }

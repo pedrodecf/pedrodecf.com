@@ -3,6 +3,7 @@ import { Nunito as FontSans } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Menu } from './_components/Menu'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -33,6 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Menu />
           {children}
         </ThemeProvider>
       </body>

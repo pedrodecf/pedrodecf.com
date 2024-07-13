@@ -1,6 +1,5 @@
 import { CardBox } from './_components/CardBox'
 import { Header } from './_components/Header'
-import { ModeToggle } from './_components/ModeToggle'
 
 export default function Home() {
   const jobs = [
@@ -35,44 +34,49 @@ export default function Home() {
       avatar: '/rocketseat-logo.png',
       title: 'Rocketseat',
       description: 'Curso Ignite',
-      duration: '2024',
+      duration: '2023',
     },
     {
       avatar: '/barao-de-maua-logo.png',
       title: 'Barão de Mauá',
-      description: 'Produção Audiovisual',
+      description: 'Tecnólogo em Produção Audiovisual',
       duration: '2018 - 2019',
     },
   ]
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Header />
-      <CardBox
-        title="Sobre mim"
-        link="/about"
-        linkText="Saiba mais"
-        description="Me chamo Pedro de Freitas e sou desenvolvedor há 3 anos, 
+    <main className="flex min-h-screen items-center justify-between">
+      <section className="flex flex-col gap-6 m-8 w-8/12">
+        <Header />
+        <CardBox
+          title="Sobre mim"
+          link="/about"
+          linkText="Saiba mais"
+          description="Me chamo Pedro de Freitas e sou desenvolvedor há 3 anos, 
         especializado em desenvolvimento web. Tenho amplo domínio do ecossistema 
         JavaScript e conhecimento em diversos frameworks. Trabalho com APIs REST e 
         GraphQL, além de mensageria e microserviços. Utilizo práticas de clean code e 
         SOLID, com experiência em bancos de dados SQL e NoSQL. Sempre priorizo a 
         experiência do usuário, performance, testes e escalabilidade. Sou proativo, 
         comprometido e busco constantemente aprimorar minhas habilidades técnicas."
-      />
-      <CardBox
-        title="Experiência Profissional"
-        buttonText="Baixar meu currículo"
-        buttonIcon="download"
-        activity={jobs}
-      />
-      <CardBox
-        title="Formação"
-        activity={education}
-        link="/certificates"
-        linkText="Certificados"
-      />
-      <ModeToggle />
+        />
+        <div className="flex gap-6">
+          <CardBox
+            className="w-1/2 h-fit"
+            title="Experiência Profissional"
+            buttonText="Baixar meu currículo"
+            buttonIcon="download"
+            activity={jobs}
+          />
+          <CardBox
+            className="w-1/2"
+            title="Formação"
+            activity={education}
+            link="/certificates"
+            linkText="Certificados"
+          />
+        </div>
+      </section>
     </main>
   )
 }

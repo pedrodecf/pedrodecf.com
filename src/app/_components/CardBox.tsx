@@ -6,6 +6,7 @@ import { DownloadIcon, CaretRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 interface CardProps {
+  className?: string
   title: string
   link?: string
   linkText?: string
@@ -24,7 +25,7 @@ export function CardBox(props: CardProps) {
   const hasActivity = props.activity && props.activity.length > 0
 
   return (
-    <Card>
+    <Card className={`${props.className}`}>
       <CardHeader className="flex flex-row align-middle justify-between">
         <h2 className="text-xl font-bold">{props.title}</h2>
         {props.link && (

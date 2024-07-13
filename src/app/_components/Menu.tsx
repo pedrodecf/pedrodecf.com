@@ -1,0 +1,95 @@
+'use client'
+
+import Link from 'next/link'
+
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu'
+import {
+  EnvelopeClosedIcon,
+  GitHubLogoIcon,
+  HomeIcon,
+  PersonIcon,
+  ReaderIcon,
+  RocketIcon,
+} from '@radix-ui/react-icons'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+
+export function Menu() {
+  return (
+    <header className="w-custom-840 flex justify-center mb-4 border-solid border border-border rounded-lg shadow-custom-light">
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem className="my-1">
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <HomeIcon className="pr-1 mr-1" /> Início
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <Separator orientation="vertical" className="h-7" />
+
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <PersonIcon className="pr-1 mr-1" /> Sobre mim
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <Separator orientation="vertical" className="h-7" />
+
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <RocketIcon className="pr-1 mr-1" />
+                Tecnologias
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <Separator orientation="vertical" className="h-7" />
+
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <ReaderIcon className="pr-1 mr-1" /> Certificados
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <Separator orientation="vertical" className="h-7" />
+
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <EnvelopeClosedIcon className="pr-1 mr-1" />
+                Contato
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <Separator orientation="vertical" className="h-7" />
+
+          <NavigationMenuItem className="relative">
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <GitHubLogoIcon className="pr-1 mr-1 " />
+                Portfólio
+                <Badge className="absolute -top-3.5 right-0.5 rounded-full px-1 shadow-none text-xs">
+                  🔥
+                </Badge>
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </header>
+  )
+}

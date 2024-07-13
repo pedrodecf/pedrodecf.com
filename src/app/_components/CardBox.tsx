@@ -30,7 +30,7 @@ export function CardBox(props: CardProps) {
         <h2 className="text-xl font-bold">{props.title}</h2>
         {props.link && (
           <Link
-            className="text-xs flex align-middle text-primary hover:text-violet-800 transition-all "
+            className="text-xs flex align-middle text-primary hover:text-secondary-foreground transition-all "
             href={props.link}
           >
             {props.linkText}
@@ -84,7 +84,7 @@ export function CardBox(props: CardProps) {
 
       {props.buttonText && (
         <CardFooter>
-          <Button className="w-full">
+          <Button className="w-full bg-gradient-to-l from-">
             {props.buttonIcon === 'download' && (
               <DownloadIcon className="mr-2 h-4 w-4" />
             )}

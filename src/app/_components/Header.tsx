@@ -10,10 +10,10 @@ export function Header() {
         width={100}
         height={100}
         priority={true}
-        className="rounded-lg"
+        className="rounded-lg border-solid border border-border shadow-custom-light"
       />
       <div className="flex flex-col align-middle justify-center">
-        <h1 className="font-extrabold text-3xl">Pedro de Freitas</h1>
+        <h1 className="font-extrabold text-3xl">Pedro de Freitas</h1>{' '}
         <p className="text-foreground font-medium opacity-60">
           Desenvolvedor Full Stack
         </p>
@@ -24,7 +24,6 @@ export function Header() {
           <Badge variant="default">NestJS</Badge>
           <Badge variant="default">JavaScript</Badge>
           <Badge variant="default">TypeScript</Badge>
-          <Badge variant="default">Golang</Badge>
         </div>
       </div>
     </header>

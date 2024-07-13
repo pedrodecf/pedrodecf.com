@@ -29,6 +29,7 @@ const config = {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
         },
+        primaryLight: 'hsl(var(--primaryLight))',
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
@@ -79,6 +80,9 @@ const config = {
       boxShadow: {
         'custom-light':
           '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+      },
+      width: {
+        'custom-840': '840px',
       },
     },
   },

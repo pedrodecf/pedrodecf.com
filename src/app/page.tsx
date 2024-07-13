@@ -1,5 +1,6 @@
 import { CardBox } from './_components/CardBox'
 import { Header } from './_components/Header'
+import { Menu } from './_components/Menu'
 
 export default function Home() {
   const jobs = [
@@ -45,8 +46,9 @@ export default function Home() {
   ]
 
   return (
-    <main className="flex min-h-screen items-center justify-between">
-      <section className="flex flex-col gap-6 m-8 w-8/12">
+    <main className="flex min-h-screen justify-center">
+      <section className="flex flex-col gap-6 m-8 w-custom-840">
+        <Menu />
         <Header />
         <CardBox
           title="Sobre mim"

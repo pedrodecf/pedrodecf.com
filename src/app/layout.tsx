@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Menu } from './_components/Menu'
+import { Footer } from './_components/Footer'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -34,8 +35,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Menu />
-          {children}
+          <div className="w-custom-840 mt-5 mx-auto">
+            <Menu />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

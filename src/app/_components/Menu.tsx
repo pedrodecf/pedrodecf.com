@@ -23,7 +23,7 @@ import { Separator } from '@/components/ui/separator'
 export function Menu() {
   return (
     <header className="flex justify-center">
-      <nav className="w-custom-840 flex justify-center mt-5 mb-3 py-1 border-solid border border-border rounded-lg shadow-custom-light">
+      <nav className="w-custom-840 flex justify-center mb-3 py-1 border-solid border border-border rounded-lg shadow-custom-light">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem className="my-1">

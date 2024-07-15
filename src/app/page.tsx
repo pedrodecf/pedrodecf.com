@@ -45,38 +45,36 @@ export default function Home() {
   ]
 
   return (
-    <main className="flex justify-center">
-      <section className="flex flex-col gap-6 m-8 w-custom-840">
-        <Header />
-        <CardBox
-          title="Sobre mim"
-          link="/about"
-          linkText="Saiba mais"
-          description="Me chamo Pedro de Freitas e sou desenvolvedor há 3 anos, 
+    <main className="flex flex-col justify-center mt-8 gap-5">
+      <Header />
+      <CardBox
+        title="Sobre mim"
+        link="/about"
+        linkText="Saiba mais"
+        description="Me chamo Pedro de Freitas e sou desenvolvedor há 3 anos, 
         especializado em desenvolvimento web. Tenho amplo domínio do ecossistema 
         JavaScript e conhecimento em diversos frameworks. Trabalho com APIs REST e 
         GraphQL, além de mensageria e microserviços. Utilizo práticas de clean code e 
         SOLID, com experiência em bancos de dados SQL e NoSQL. Sempre priorizo a 
         experiência do usuário, performance, testes e escalabilidade. Sou proativo, 
         comprometido e busco constantemente aprimorar minhas habilidades técnicas."
+      />
+      <div className="flex gap-6">
+        <CardBox
+          className="w-1/2 h-fit"
+          title="Experiência Profissional"
+          buttonText="Baixar meu currículo"
+          buttonIcon="download"
+          activity={jobs}
         />
-        <div className="flex gap-6">
-          <CardBox
-            className="w-1/2 h-fit"
-            title="Experiência Profissional"
-            buttonText="Baixar meu currículo"
-            buttonIcon="download"
-            activity={jobs}
-          />
-          <CardBox
-            className="w-1/2"
-            title="Formação"
-            activity={education}
-            link="/certificates"
-            linkText="Certificados"
-          />
-        </div>
-      </section>
+        <CardBox
+          className="w-1/2"
+          title="Formação"
+          activity={education}
+          link="/certificates"
+          linkText="Certificados"
+        />
+      </div>
     </main>
   )
 }

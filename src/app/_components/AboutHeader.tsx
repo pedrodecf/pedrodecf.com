@@ -1,10 +1,11 @@
 import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export function AboutHeader() {
   return (
-    <div className="flex flex-row justify-between gap-5">
+    <section className="flex flex-row justify-between gap-5">
       <div className="w-fit pr-2">
         <h2 className="text-4xl font-bold">
           <span className="text-3xl">
@@ -13,23 +14,24 @@ export function AboutHeader() {
           Me chamo{' '}
           <span className="text-primary font-extrabold">Pedro de Freitas!</span>
         </h2>
-        <p className="mt-2 opacity-90">
+        <p className="mt-2 text-foreground font-medium opacity-80">
           Nessa sessão você conhecerá um pouco mais da minha jornada, dos meus
           gostos e hobbies. Tech skills você pode encontrar{' '}
-          <Link href="/skills" className="text-primary hover:underline">
+          <Link href="/skills" className="text-primary underline">
             aqui.
           </Link>
         </p>
-        <p className="mt-2 opacity-90">
+        <p className="mt-2 text-foreground font-medium opacity-80">
           Caso queira ver projetos e portfólio, você irá encontrar{' '}
-          <Link href="/portfolio" className="text-primary hover:underline">
+          <Link href="/portfolio" className="text-primary underline">
             aqui.
           </Link>{' '}
           Minhas redes sociais e e-mail estão na sessão{' '}
-          <Link href="/contact" className="text-primary hover:underline">
+          <Link href="/contact" className="text-primary underline">
             contato.
           </Link>
         </p>
+        <Separator className="mt-8 w-11/12" />
       </div>
 
       <div className="relative">
@@ -72,6 +74,6 @@ export function AboutHeader() {
           />
         </Badge>
       </div>
-    </div>
+    </section>
   )
 }

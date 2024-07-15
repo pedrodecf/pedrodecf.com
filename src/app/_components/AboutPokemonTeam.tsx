@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export function AboutPokemonTeam() {
   return (
-    <section className="mt-8">
+    <section className="my-8">
       <h2 className="text-2xl font-bold">Meu time Pokémon:</h2>
       <p className="mb-8 text-sm opacity-60">
         Não dá pra levar muito a sério, pois estou sempre mudando (com excessão
@@ -34,6 +34,7 @@ export function AboutPokemonTeam() {
               alt="Dragonite"
               width={85}
               height={98}
+              unoptimized
             />
           </div>
         </Badge>
@@ -62,6 +63,7 @@ export function AboutPokemonTeam() {
               alt="Blazike Mega"
               width={118}
               height={107}
+              unoptimized
             />
           </div>
         </Badge>
@@ -90,6 +92,7 @@ export function AboutPokemonTeam() {
               alt="Garchomp"
               width={115}
               height={108}
+              unoptimized
             />
           </div>
         </Badge>
@@ -118,6 +121,7 @@ export function AboutPokemonTeam() {
               alt="Ninetales Alola"
               width={89}
               height={70}
+              unoptimized
             />
           </div>
         </Badge>
@@ -146,6 +150,7 @@ export function AboutPokemonTeam() {
               alt="Metagross"
               width={142}
               height={73}
+              unoptimized
             />
           </div>
         </Badge>
@@ -169,7 +174,13 @@ export function AboutPokemonTeam() {
             className="absolute -top-3 right-3"
           />
           <div className="w-24 h-24 flex items-center justify-center">
-            <Image src="/toxapex.gif" alt="Toxapex" width={113} height={82} />
+            <Image
+              src="/toxapex.gif"
+              alt="Toxapex"
+              width={113}
+              height={82}
+              unoptimized
+            />
           </div>
         </Badge>
       </div>

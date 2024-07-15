@@ -80,8 +80,8 @@ export function AboutJourney() {
             <p className="mt-2 text-foreground font-medium opacity-80">
               Apesar de ser formado em Produção Audiovisual, optei por não
               permanecer na área, pois felizmente minha paixão era outra. Depois
-              de muito tempo pensando, decidi que era hora de realmente começar
-              uma
+              de muito tempo pensando, decidi que em 2024 era hora de realmente
+              começar uma
               <span className="font-extrabold text-primary">
                 {' '}
                 carreira de verdade

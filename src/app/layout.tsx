@@ -5,6 +5,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Menu } from './_components/Menu'
 import { Footer } from './_components/Footer'
+import { ModeToggle } from './_components/ModeToggle'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -25,7 +26,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen bg-background font-sans antialiased relative',
           fontSans.variable,
         )}
       >
@@ -35,7 +36,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-custom-840 mt-5 mx-auto">
+          <ModeToggle className="fixed top-5 right-5" />
+          <div className="w-custom-840 mt-5 mx-auto ">
             <Menu />
             {children}
             <Footer />

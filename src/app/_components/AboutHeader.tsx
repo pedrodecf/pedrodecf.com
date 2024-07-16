@@ -44,19 +44,19 @@ export function AboutHeader() {
           className="rounded-lg border-solid border border-border shadow-custom-light"
         />
 
-        <Badge className="rounded-full absolute -bottom-5 left-12 px-1 py-1 bg-white shadow-custom-light hover:bg-primary animate-float-2">
+        <Badge className="rounded-full absolute -bottom-5 left-12 px-1 py-1 bg-foreground shadow-custom-light hover:bg-primary animate-float-2">
           <Image src="/nodejs-ico.png" alt="Memoji" width={25} height={25} />
         </Badge>
 
-        <Badge className="rounded-full absolute bottom-10 -left-5 px-1 py-1 bg-white shadow-custom-light hover:bg-primary animate-float-3">
+        <Badge className="rounded-full absolute bottom-10 -left-5 px-1 py-1 bg-foreground shadow-custom-light hover:bg-primary animate-float-3">
           <Image src="/react-ico.png" alt="Memoji" width={25} height={25} />
         </Badge>
 
-        <Badge className="rounded-full absolute top-12 -right-5 px-1 py-1 bg-white shadow-custom-light hover:bg-primary animate-float-3">
+        <Badge className="rounded-full absolute top-12 -right-5 px-1 py-1 bg-foreground shadow-custom-light hover:bg-primary animate-float-3">
           <Image src="/nextjs-ico.png" alt="Memoji" width={25} height={25} />
         </Badge>
 
-        <Badge className="rounded-full absolute top-6 -left-3 px-1 py-1 bg-white shadow-custom-light hover:bg-primary animate-float-1">
+        <Badge className="rounded-full absolute top-6 -left-3 px-1 py-1 bg-foreground shadow-custom-light hover:bg-primary animate-float-1">
           <Image
             src="/javascript-ico.png"
             alt="Memoji"
@@ -65,7 +65,7 @@ export function AboutHeader() {
           />
         </Badge>
 
-        <Badge className="rounded-full absolute bottom-8 -right-3 bg-white px-1 py-1 shadow-custom-light hover:bg-primary animate-float-2">
+        <Badge className="rounded-full absolute bottom-8 -right-3 bg-foreground px-1 py-1 shadow-custom-light hover:bg-primary animate-float-2">
           <Image
             src="/typescript-ico.png"
             alt="Memoji"

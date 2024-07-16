@@ -58,7 +58,7 @@ export function Menu() {
             <Separator orientation="vertical" className="h-7" />
 
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link href="/certificates" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <ReaderIcon className="pr-1 mr-1" /> Certificados
                 </NavigationMenuLink>

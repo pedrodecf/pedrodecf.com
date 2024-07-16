@@ -7,9 +7,6 @@ import {
   motion,
   useReducedMotion,
 } from 'framer-motion'
-import { ReactHTML } from 'react'
-
-type Without<T, K> = Pick<T, Exclude<keyof T, K>>
 
 interface FadeInProps extends HTMLMotionProps<'div'> {
   children: React.ReactNode
@@ -17,7 +14,7 @@ interface FadeInProps extends HTMLMotionProps<'div'> {
   delay?: number
   duration?: number
   value?: number
-  as?: Without<keyof ReactHTML, 'template' | 'slot'>
+  as?: string
   initial?: Target
   animate?: Target
   exit?: Target
@@ -58,7 +55,7 @@ export function FadeIn({
     },
   }[to]
 
-  const Component = motion[as] as ForwardRefComponent<
+  const Component = motion[as as keyof typeof motion] as ForwardRefComponent<
     HTMLDivElement,
     HTMLMotionProps<'div'>
   >

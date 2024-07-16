@@ -9,7 +9,7 @@ interface FrameProps {
 }
 
 export function Frame({ title, certificate }: FrameProps) {
-  const [frameIndex, setFrameIndex] = useState(0)
+  const [frameIndex, setFrameIndex] = useState<number | null>(null)
   const frames = [
     '/frames/frame-01.png',
     '/frames/frame-02.png',
@@ -25,6 +25,10 @@ export function Frame({ title, certificate }: FrameProps) {
     return Math.floor(Math.random() * 4)
   }
 
+  if (frameIndex === null) {
+    return null
+  }
+
   return (
     <div className="relative w-[200px] h-[158px] mb-9">
       <div className="absolute top-0 left-0 w-full h-[138px] flex justify-center items-center">
@@ -36,7 +40,7 @@ export function Frame({ title, certificate }: FrameProps) {
             objectFit="cover"
             className="z-20"
             quality={100}
-            priority
+            priority={true}
           />
         </div>
       </div>
@@ -46,9 +50,9 @@ export function Frame({ title, certificate }: FrameProps) {
         width={200}
         height={138}
         className="absolute top-0 left-0 z-30"
-        priority
+        priority={true}
       />
-      <div className="absolute -bottom-4 left-0 w-full text-center text-white p-1 z-40">
+      <div className="absolute -bottom-4 left-0 w-full text-center text-foreground p-1 z-40">
         <h3 className="text-sm font-bold truncate whitespace-nowrap">
           {title}
         </h3>

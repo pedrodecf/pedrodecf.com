@@ -30,7 +30,7 @@ export function CardBox(props: CardProps) {
         <h2 className="text-xl font-bold">{props.title}</h2>
         {props.link && (
           <Link
-            className="text-xs flex align-middle text-primary hover:text-secondary-foreground transition-all "
+            className="text-xs flex align-middle text-primary underline"
             href={props.link}
           >
             {props.linkText}

@@ -10,8 +10,8 @@ export function AboutJourney() {
           <Image
             src="/screenshot-1.png"
             alt="Logo"
-            width={280}
-            height={934}
+            width={274}
+            height={154}
             priority={true}
             className="rounded-lg border-solid border border-border shadow-custom-light"
           />
@@ -57,8 +57,8 @@ export function AboutJourney() {
           <Image
             src="/screenshot-2.jpeg"
             alt="Logo"
-            width={280}
-            height={934}
+            width={274}
+            height={154}
             priority={true}
             className="rounded-lg border-solid border border-border shadow-custom-light"
           />
@@ -71,8 +71,8 @@ export function AboutJourney() {
           <Image
             src="/screenshot-3.jpg"
             alt="Logo"
-            width={250}
-            height={934}
+            width={274}
+            height={154}
             priority={true}
             className="rounded-lg border-solid border border-border shadow-custom-light"
           />

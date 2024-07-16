@@ -11,6 +11,7 @@ export function SkillBadge(props: SkillBadgeProps) {
     <Badge
       variant="secondary"
       className="max-w-[200px] min-w-[200px] flex items-center relative p-2 shadow-custom-light group"
+      style={{ userSelect: 'none' }}
     >
       <div className="relative w-9 h-9 rounded-lg overflow-hidden">
         <Image

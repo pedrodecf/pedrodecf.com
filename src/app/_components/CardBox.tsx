@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 interface CardProps {
   className?: string
-  title: string
+  title: React.ReactNode
   link?: string
   linkText?: string
   description?: string
@@ -27,7 +27,9 @@ export function CardBox(props: CardProps) {
   return (
     <Card className={`${props.className}`}>
       <CardHeader className="flex flex-row align-middle justify-between">
-        <h2 className="text-xl font-bold">{props.title}</h2>
+        <h2 className="text-xl font-bold flex items-center gap-2">
+          {props.title}
+        </h2>
         {props.link && (
           <Link
             className="text-xs flex align-middle text-primary underline"

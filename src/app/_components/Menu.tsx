@@ -68,7 +68,7 @@ export function Menu() {
             <Separator orientation="vertical" className="h-7" />
 
             <NavigationMenuItem>
-              <Link href="/" legacyBehavior passHref>
+              <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <EnvelopeClosedIcon className="pr-1 mr-1" />
                   Contato

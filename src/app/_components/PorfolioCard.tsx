@@ -42,6 +42,7 @@ export function PortfolioCard({
             <Image
               src={image}
               alt={title}
+              quality={85}
               width={1280}
               height={720}
               priority={true}

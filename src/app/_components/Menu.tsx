@@ -79,7 +79,7 @@ export function Menu() {
             <Separator orientation="vertical" className="h-7" />
 
             <NavigationMenuItem className="relative">
-              <Link href="/" legacyBehavior passHref>
+              <Link href="/portfolio" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <GitHubLogoIcon className="pr-1 mr-1 " />
                   Portfólio

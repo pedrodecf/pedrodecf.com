@@ -26,22 +26,22 @@ export function Header() {
           Desenvolvedor Full Stack
         </p>
         <div className="flex gap-3 mt-2">
-          <Badge variant="default" style={{ userSelect: 'none' }}>
+          <Badge variant="default" className="select-none">
             React
           </Badge>
-          <Badge variant="default" style={{ userSelect: 'none' }}>
+          <Badge variant="default" className="select-none">
             Node.js
           </Badge>
-          <Badge variant="default" style={{ userSelect: 'none' }}>
+          <Badge variant="default" className="select-none">
             Next.js
           </Badge>
-          <Badge variant="default" style={{ userSelect: 'none' }}>
+          <Badge variant="default" className="select-none">
             NestJS
           </Badge>
-          <Badge variant="default" style={{ userSelect: 'none' }}>
+          <Badge variant="default" className="select-none">
             JavaScript
           </Badge>
-          <Badge variant="default" style={{ userSelect: 'none' }}>
+          <Badge variant="default" className="select-none">
             TypeScript
           </Badge>
         </div>

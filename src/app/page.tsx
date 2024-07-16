@@ -4,13 +4,13 @@ import { Header } from './_components/Header'
 export default function Home() {
   const jobs = [
     {
-      avatar: '/carefy-logo.png',
+      avatar: '/institutions/carefy-logo.png',
       title: 'Desenvolvedor Full Stack (Estágio)',
       description: 'Carefy',
       duration: '2024 - 2024',
     },
     {
-      avatar: '/freelancer.jpg',
+      avatar: '/institutions/freelancer.jpg',
       title: 'Desenvolvedor Full Stack',
       description: 'P H C De Freitas Serviços de Informações',
       duration: '2021 - 2024',
@@ -19,25 +19,25 @@ export default function Home() {
 
   const education = [
     {
-      avatar: '/fiap-logo.png',
+      avatar: '/institutions/fiap-logo.png',
       title: 'FIAP',
       description: 'Bacharelado em Engenharia de Software',
       duration: '2024 - 2027',
     },
     {
-      avatar: '/full-cycle-logo.jpeg',
-      title: 'Full Cyle',
+      avatar: '/institutions/full-cycle-logo.jpeg',
+      title: 'Full Cycle',
       description: 'Curso Full Cycle 3.0',
       duration: '2024',
     },
     {
-      avatar: '/rocketseat-logo.png',
+      avatar: '/institutions/rocketseat-logo.png',
       title: 'Rocketseat',
       description: 'Curso Ignite',
       duration: '2023',
     },
     {
-      avatar: '/barao-de-maua-logo.png',
+      avatar: '/institutions/barao-de-maua-logo.png',
       title: 'Barão de Mauá',
       description: 'Tecnólogo em Produção Audiovisual',
       duration: '2018 - 2019',

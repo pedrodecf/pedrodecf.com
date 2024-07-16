@@ -5,7 +5,7 @@ export function Header() {
   return (
     <section className="flex gap-6">
       <Image
-        src="/profile-pic.jpeg"
+        src="/others/profile-pic.jpeg"
         alt="Logo"
         width={100}
         height={100}
@@ -19,7 +19,12 @@ export function Header() {
             variant="outline"
             className="ml-2 rounded-full p-1 shadow-custom-light hover:bg-primary"
           >
-            <Image src="/memoji1.png" alt="memoji" width={25} height={25} />
+            <Image
+              src="/emojis/memoji1.png"
+              alt="memoji"
+              width={25}
+              height={25}
+            />
           </Badge>
         </div>
         <p className="text-foreground font-medium opacity-60">

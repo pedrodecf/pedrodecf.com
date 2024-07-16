@@ -16,7 +16,7 @@ export function AboutHobbies() {
                     className="ml-2 rounded-full p-1 shadow-custom-light hover:bg-primary transition duration-300"
                   >
                     <Image
-                      src="/memoji-like.png"
+                      src="/emojis/memoji-like.png"
                       alt="like"
                       width="50"
                       height="50"
@@ -29,7 +29,7 @@ export function AboutHobbies() {
                     className="ml-2 rounded-full p-1 shadow-custom-light hover:bg-primary transition duration-300"
                   >
                     <Image
-                      src="/memoji-dislike.png"
+                      src="/emojis/memoji-dislike.png"
                       alt="dislike"
                       width="50"
                       height="50"

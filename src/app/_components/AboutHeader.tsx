@@ -36,7 +36,7 @@ export function AboutHeader() {
 
       <div className="relative">
         <Image
-          src="/profile-pic.jpeg"
+          src="/others/profile-pic.jpeg"
           alt="Logo"
           width={350}
           height={350}
@@ -45,20 +45,35 @@ export function AboutHeader() {
         />
 
         <Badge className="select-none rounded-full absolute -bottom-5 left-12 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-2">
-          <Image src="/nodejs-ico.png" alt="Memoji" width={25} height={25} />
+          <Image
+            src="/emojis/nodejs-ico.png"
+            alt="Memoji"
+            width={25}
+            height={25}
+          />
         </Badge>
 
         <Badge className="select-none rounded-full absolute bottom-10 -left-5 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-3">
-          <Image src="/react-ico.png" alt="Memoji" width={25} height={25} />
+          <Image
+            src="/emojis/react-ico.png"
+            alt="Memoji"
+            width={25}
+            height={25}
+          />
         </Badge>
 
         <Badge className="select-none rounded-full absolute top-12 -right-5 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-3">
-          <Image src="/nextjs-ico.webp" alt="Memoji" width={25} height={25} />
+          <Image
+            src="/emojis/nextjs-ico.webp"
+            alt="Memoji"
+            width={25}
+            height={25}
+          />
         </Badge>
 
         <Badge className="select-none rounded-full absolute top-6 -left-3 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-1">
           <Image
-            src="/javascript-ico.png"
+            src="/emojis/javascript-ico.png"
             alt="Memoji"
             width={25}
             height={25}
@@ -67,7 +82,7 @@ export function AboutHeader() {
 
         <Badge className="select-none rounded-full absolute bottom-8 -right-3 bg-foreground px-1 py-1 shadow-custom-light hover:bg-foreground animate-float-2">
           <Image
-            src="/typescript-ico.png"
+            src="/emojis/typescript-ico.png"
             alt="Memoji"
             width={25}
             height={25}

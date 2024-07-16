@@ -8,7 +8,7 @@ export function AboutJourney() {
         <h2 className="text-2xl font-bold">O início da jornada do herói:</h2>
         <div className="flex flex-row justify-between gap-5 mb-5">
           <Image
-            src="/screenshot-1.png"
+            src="/screenshots/screenshot-1.png"
             alt="Logo"
             width={274}
             height={154}
@@ -55,7 +55,7 @@ export function AboutJourney() {
             </p>
           </div>
           <Image
-            src="/screenshot-2.jpeg"
+            src="/screenshots/screenshot-2.jpeg"
             alt="Logo"
             width={274}
             height={154}
@@ -69,7 +69,7 @@ export function AboutJourney() {
         <h2 className="text-2xl font-bold">Novos horizontes:</h2>
         <div className="flex flex-row justify-between gap-5">
           <Image
-            src="/screenshot-3.jpg"
+            src="/screenshots/screenshot-3.jpg"
             alt="Logo"
             width={274}
             height={154}

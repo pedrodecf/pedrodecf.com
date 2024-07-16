@@ -30,11 +30,11 @@ export function CardBox(props: CardProps) {
       as="div"
       className={`${props.className}`}
       delay={0.1}
-      duration={0.4}
+      duration={0.5}
     >
       <Card>
         <CardHeader className="flex flex-row align-middle justify-between">
-          <FadeIn delay={0.1} duration={0.4}>
+          <FadeIn delay={0.1} duration={0.5}>
             <h2 className="text-xl font-bold flex items-center gap-2">
               {props.title}
             </h2>
@@ -52,7 +52,7 @@ export function CardBox(props: CardProps) {
 
         {props.description && (
           <CardContent>
-            <FadeIn delay={0.2} duration={0.4}>
+            <FadeIn delay={0.2} duration={0.5}>
               <p className="text-foreground font-medium opacity-60">
                 {props.description}
               </p>
@@ -68,7 +68,7 @@ export function CardBox(props: CardProps) {
                 key={index}
                 className={`flex items-center gap-3 ${index < props.activity!.length - 1 ? 'mb-4' : ''}`}
                 delay={parseFloat(`0.${index + 2}`)}
-                duration={0.4}
+                duration={0.5}
               >
                 <Avatar>
                   <AvatarImage

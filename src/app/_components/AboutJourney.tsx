@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import { AboutHobbies } from './AboutHobbies'
-import { FadeIn } from './animations/fade-in'
+import { FadeIn } from './animations/FadeIn'
 
 export function AboutJourney() {
   return (
     <section>
-      <div className="flex flex-col gap-5 my-10">
-        <FadeIn delay={0.2} duration={0.5} startOnScrollIntersect>
+      <div className="flex flex-col gap-5 my-10 bg-background">
+        <FadeIn delay={0.2}>
           <h2 className="text-2xl font-bold mb-5">
             O início da jornada do herói:
           </h2>
@@ -39,7 +39,7 @@ export function AboutJourney() {
             </div>
           </div>
         </FadeIn>
-        <FadeIn delay={0.3} duration={0.5} to="left" startOnScrollIntersect>
+        <FadeIn delay={0.3} direction="left">
           <div className="flex flex-row justify-between gap-5">
             <div className="w-fit pr-2">
               <p className="mt-2 text-foreground font-medium opacity-80">
@@ -69,12 +69,12 @@ export function AboutJourney() {
             />
           </div>
         </FadeIn>
-        <FadeIn delay={0.3} duration={0.5}>
+        <FadeIn delay={0.1}>
           <AboutHobbies />
         </FadeIn>
 
-        <FadeIn delay={0.1} duration={0.5} startOnScrollIntersect>
-          <h2 className="text-2xl font-bold">Novos horizontes:</h2>
+        <FadeIn delay={0.1}>
+          <h2 className="text-2xl font-bold mb-5">Novos horizontes:</h2>
           <div className="flex flex-row justify-between gap-5">
             <Image
               src="/screenshots/screenshot-3.jpg"

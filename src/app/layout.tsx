@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { Nunito as FontSans } from 'next/font/google'
-import { cn } from '@/lib/utils'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
 import { Menu } from './_components/Menu'
 import { Footer } from './_components/Footer'
 import { ModeToggle } from './_components/ModeToggle'
+import { cn } from '../lib/utils'
+import { ThemeProvider } from '../components/theme-provider'
 
 const fontSans = FontSans({
   subsets: ['latin'],

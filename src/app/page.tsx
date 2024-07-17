@@ -45,7 +45,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="flex flex-col justify-center mt-8 gap-5">
+    <main className="flex flex-col justify-center mt-8 gap-5 bg-background">
       <Header />
       <CardBox
         title="Sobre mim"

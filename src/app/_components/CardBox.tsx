@@ -1,10 +1,15 @@
-import { AvatarFallback } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Avatar, AvatarImage } from '@radix-ui/react-avatar'
 import { DownloadIcon, CaretRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
-import { FadeIn } from './animations/fade-in'
+import { FadeIn } from './animations/FadeIn'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '../../components/ui/card'
+import { AvatarFallback } from '../../components/ui/avatar'
+import { Button } from '../../components/ui/button'
 
 interface CardProps {
   className?: string
@@ -26,18 +31,15 @@ export function CardBox(props: CardProps) {
   const hasActivity = props.activity && props.activity.length > 0
 
   return (
-    <FadeIn
-      as="div"
-      className={`${props.className}`}
-      delay={0.1}
-      duration={0.5}
-    >
+    <FadeIn as="div" className={`${props.className}`} delay={0.1}>
       <Card>
         <CardHeader className="flex flex-row align-middle justify-between">
-          <FadeIn delay={0.1} duration={0.5}>
-            <h2 className="text-xl font-bold flex items-center gap-2">
-              {props.title}
-            </h2>
+          <FadeIn
+            as="h2"
+            delay={0.1}
+            className="text-xl font-bold flex items-center gap-2"
+          >
+            {props.title}
           </FadeIn>
           {props.link && (
             <Link
@@ -52,10 +54,8 @@ export function CardBox(props: CardProps) {
 
         {props.description && (
           <CardContent>
-            <FadeIn delay={0.2} duration={0.5}>
-              <p className="text-foreground font-medium opacity-60">
-                {props.description}
-              </p>
+            <FadeIn as="p" delay={0.2} className="text-opaque font-medium">
+              {props.description}
             </FadeIn>
           </CardContent>
         )}
@@ -68,7 +68,7 @@ export function CardBox(props: CardProps) {
                 key={index}
                 className={`flex items-center gap-3 ${index < props.activity!.length - 1 ? 'mb-4' : ''}`}
                 delay={parseFloat(`0.${index + 2}`)}
-                duration={0.5}
+                startOnScrollIntersect={false}
               >
                 <Avatar>
                   <AvatarImage
@@ -82,10 +82,10 @@ export function CardBox(props: CardProps) {
                 </Avatar>
                 <div>
                   <h3 className="text-sm font-semibold">{item.title}</h3>
-                  <p className="text-xs font-medium opacity-60">
+                  <p className="text-xs font-medium text-opaque">
                     {item.description}
                   </p>
-                  <p className="text-xs font-medium opacity-60">
+                  <p className="text-xs font-medium text-opaque">
                     {item.duration}
                   </p>
                 </div>

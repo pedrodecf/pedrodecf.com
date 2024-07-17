@@ -1,5 +1,5 @@
-import { Badge } from '@/components/ui/badge'
 import Image from 'next/image'
+import { Badge } from '../../components/ui/badge'
 
 export function AboutHobbies() {
   return (

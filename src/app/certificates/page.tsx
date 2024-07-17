@@ -13,10 +13,12 @@ export default function Certificates() {
           title="Bootcamp Potência Tech iFood Desenvolvimento de Jogos - DIO"
           certificate="/certificates/certificate-2.jpg"
         />
+
         <Frame
           title="Explorer - Rocketseat"
           certificate="/certificates/certificate-3.jpg"
         />
+
         <Frame
           title="Programa de Formação Season 05 - FCamara"
           certificate="/certificates/certificate-4.jpg"

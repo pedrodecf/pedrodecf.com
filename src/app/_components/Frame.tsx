@@ -1,9 +1,13 @@
 'use client'
 
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { DialogTitle } from '@radix-ui/react-dialog'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from '../../components/ui/dialog'
 
 interface FrameProps {
   title: string

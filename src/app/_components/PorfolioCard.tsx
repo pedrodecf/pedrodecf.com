@@ -1,12 +1,21 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { DialogTitle } from '@radix-ui/react-dialog'
 import { ArrowTopRightIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import Link from 'next/link'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '../../components/ui/card'
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from '../../components/ui/dialog'
+import { Button } from '../../components/ui/button'
 
 interface PortoflioCardProps {
   title: string

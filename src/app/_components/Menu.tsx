@@ -4,13 +4,6 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-import {
   EnvelopeClosedIcon,
   GitHubLogoIcon,
   HomeIcon,
@@ -18,8 +11,15 @@ import {
   ReaderIcon,
   RocketIcon,
 } from '@radix-ui/react-icons'
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from '../../components/ui/navigation-menu'
+import { Separator } from '../../components/ui/separator'
+import { Badge } from '../../components/ui/badge'
 
 export function Menu() {
   const pathname = usePathname()

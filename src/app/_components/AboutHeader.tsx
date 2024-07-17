@@ -39,12 +39,12 @@ export function AboutHeader() {
 
       <FadeIn as="div" className="relative">
         <Image
-          src="/others/profile-pic.jpeg"
+          src="/others/profile-3.jpg"
           alt="Logo"
           width={350}
           height={350}
           priority={true}
-          className="rounded-lg border-solid border border-border shadow-custom-light"
+          className="rounded-full border-solid border border-border shadow-custom-light select-none"
         />
 
         <Badge className="select-none rounded-full absolute -bottom-5 left-12 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-2">
@@ -74,7 +74,7 @@ export function AboutHeader() {
           />
         </Badge>
 
-        <Badge className="select-none rounded-full absolute top-6 -left-3 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-1">
+        <Badge className="select-none rounded-full absolute top-6 -left-1 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-1">
           <Image
             src="/emojis/javascript-ico.png"
             alt="Memoji"

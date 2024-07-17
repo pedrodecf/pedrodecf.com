@@ -7,7 +7,7 @@ export function Header() {
     <section className="flex gap-6">
       <FadeIn as="div" delay={0.1}>
         <Image
-          src="/others/profile-pic.jpeg"
+          src="/others/profile.jpg"
           alt="Logo"
           width={100}
           height={100}
@@ -19,19 +19,6 @@ export function Header() {
         <div className="flex items-center">
           <FadeIn as="h1" delay={0.1} className="font-extrabold text-3xl">
             Pedro de Freitas
-          </FadeIn>
-          <FadeIn as="div" delay={0.1}>
-            <Badge
-              variant="outline"
-              className="ml-2 rounded-full p-1 shadow-custom-light hover:bg-primary"
-            >
-              <Image
-                src="/emojis/memoji1.png"
-                alt="memoji"
-                width={25}
-                height={25}
-              />
-            </Badge>
           </FadeIn>
         </div>
         <FadeIn as="p" delay={0.1} className="font-medium text-opaque">

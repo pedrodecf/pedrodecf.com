@@ -96,11 +96,13 @@ export function CardBox(props: CardProps) {
 
         {props.buttonText && (
           <CardFooter>
-            <Button className="w-full bg-gradient-to-l from-">
-              {props.buttonIcon === 'download' && (
-                <DownloadIcon className="mr-2 h-4 w-4" />
-              )}
-              {props.buttonText}
+            <Button asChild className="w-full bg-gradient-to-l from-">
+              <a href="/others/curriculo-pedrodecf.pdf" download>
+                {props.buttonIcon === 'download' && (
+                  <DownloadIcon className="mr-2 h-4 w-4" />
+                )}
+                {props.buttonText}
+              </a>
             </Button>
           </CardFooter>
         )}

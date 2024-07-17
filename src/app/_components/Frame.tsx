@@ -58,7 +58,7 @@ export function Frame({ title, certificate }: FrameProps) {
             width={200}
             height={158}
             priority
-            className="absolute top-0 left-0 z-30 cursor-pointer w-auto h-auto"
+            className="absolute top-0 left-0 z-30 cursor-pointer w-auto h-auto "
           />
         </DialogTrigger>
         <DialogContent aria-describedby={undefined} className="max-w-[60vw]">

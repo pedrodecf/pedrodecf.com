@@ -6,8 +6,8 @@ import { Badge } from '../../components/ui/badge'
 
 export function AboutHeader() {
   return (
-    <section className="flex flex-row justify-between gap-5 bg-background">
-      <div className="w-fit pr-2">
+    <section className="flex flex-row justify-between gap-5 bg-background max-[840px]:flex max-[840px]:flex-col">
+      <div className="w-fit pr-2 max-[840px]:text-center">
         <FadeIn as="h2" className="text-4xl font-bold">
           <span className="text-3xl">
             Olá, muito prazer. <br />
@@ -23,7 +23,7 @@ export function AboutHeader() {
               aqui.
             </Link>
           </p>
-          <p className="mt-2 text-foreground font-medium opacity-80">
+          <p className="mt-2 text-foreground font-medium opacity-80 max-[840px]:hidden">
             Caso queira ver projetos e portfólio, você irá encontrar{' '}
             <Link href="/portfolio" className="text-primary underline">
               aqui.
@@ -33,11 +33,14 @@ export function AboutHeader() {
               contato.
             </Link>
           </p>
-          <Separator className="mt-8 w-11/12" />
+          <Separator className="mt-8 w-11/12 max-[840px]:hidden" />
         </FadeIn>
       </div>
 
-      <FadeIn as="div" className="relative">
+      <FadeIn
+        as="div"
+        className="relative max-[840px]:w-7/12 max-[840px]:justify-center max-[840px]:mx-auto"
+      >
         <Image
           src="/others/profile-3.jpg"
           alt="Logo"

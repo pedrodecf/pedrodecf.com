@@ -54,7 +54,11 @@ export function CardBox(props: CardProps) {
 
         {props.description && (
           <CardContent>
-            <FadeIn as="p" delay={0.2} className="text-opaque font-medium">
+            <FadeIn
+              as="p"
+              delay={0.2}
+              className="text-opaque font-medium max-[840px]:line-clamp-6"
+            >
               {props.description}
             </FadeIn>
           </CardContent>

@@ -82,7 +82,7 @@ export default function Portfolio() {
   return (
     <main className="flex flex-col justify-center mt-8 gap-5">
       <h2 className="text-2xl font-bold">Portfolio: </h2>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 max-[840px]:flex max-[840px]:flex-col">
         {projects.map((project, index) => (
           <PortfolioCard key={index} project={project} />
         ))}
@@ -90,7 +90,7 @@ export default function Portfolio() {
       <FadeIn as="h2" className="text-2xl font-bold mt-8">
         Projetos menores:
       </FadeIn>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 max-[840px]:flex max-[840px]:flex-col">
         {otherProjects.map((project, index) => (
           <MiniPortfolioCard key={index} project={project} />
         ))}

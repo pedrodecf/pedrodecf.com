@@ -5,22 +5,22 @@ import { FadeIn } from './animations/FadeIn'
 export function AboutJourney() {
   return (
     <section>
-      <div className="flex flex-col gap-5 my-10 bg-background">
+      <div className="flex flex-col gap-5 my-10 bg-background max-[840px]:mt-14">
         <FadeIn delay={0.2}>
-          <h2 className="text-2xl font-bold mb-5">
+          <h2 className="text-2xl font-bold mb-5 max-[840px]:text-xl max-[840px]:mb-2 max-[840px]:text-center">
             O início da jornada do herói:
           </h2>
-          <div className="flex flex-row justify-between gap-5 mb-5">
+          <div className="flex flex-row justify-between gap-5 mb-5 max-[840px]:flex-col">
             <Image
               src="/screenshots/screenshot-1.png"
               alt="Logo"
               width={274}
               height={154}
               priority={true}
-              className="rounded-lg border-solid border border-border shadow-custom-light"
+              className="rounded-lg border-solid border border-border shadow-custom-light max-[840px]:w-full"
             />
             <div className="w-fit pr-2">
-              <p className="mt-2 text-foreground font-medium opacity-80">
+              <p className="mt-2 text-foreground font-medium opacity-80 max-[840px]:text-center">
                 No início de 2018 comecei um novo hobby, animes. Fiquei
                 extremamente viciado, mas naquela época era muito complicado
                 para assistir, pois não eram tão acessíveis. Então, tive que
@@ -40,9 +40,9 @@ export function AboutJourney() {
           </div>
         </FadeIn>
         <FadeIn delay={0.3} direction="left">
-          <div className="flex flex-row justify-between gap-5">
+          <div className="flex flex-row justify-between gap-5 max-[840px]:flex-col-reverse">
             <div className="w-fit pr-2">
-              <p className="mt-2 text-foreground font-medium opacity-80">
+              <p className="mt-2 text-foreground font-medium opacity-80 max-[840px]:text-center">
                 Em alguns meses, o site já tinha{' '}
                 <span className="font-extrabold text-primary">
                   milhões de acessos e usuários.{' '}
@@ -65,7 +65,7 @@ export function AboutJourney() {
               width={274}
               height={154}
               priority={true}
-              className="rounded-lg border-solid border border-border shadow-custom-light"
+              className="rounded-lg border-solid border border-border shadow-custom-light max-[840px]:w-full"
             />
           </div>
         </FadeIn>
@@ -74,18 +74,20 @@ export function AboutJourney() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h2 className="text-2xl font-bold mb-5">Novos horizontes:</h2>
-          <div className="flex flex-row justify-between gap-5">
+          <h2 className="text-2xl font-bold mb-5 ax-[840px]:text-xl max-[840px]:mb-2 max-[840px]:text-center">
+            Novos horizontes:
+          </h2>
+          <div className="flex flex-row justify-between gap-5  max-[840px]:flex-col">
             <Image
               src="/screenshots/screenshot-3.jpg"
               alt="Logo"
               width={274}
               height={154}
               priority={true}
-              className="rounded-lg border-solid border border-border shadow-custom-light"
+              className="rounded-lg border-solid border border-border shadow-custom-light max-[840px]:w-full"
             />
             <div className="w-fit pr-2">
-              <p className="mt-2 text-foreground font-medium opacity-80">
+              <p className="mt-2 text-foreground font-medium opacity-80 max-[840px]:text-center">
                 Apesar de ser formado em Produção Audiovisual, optei por não
                 permanecer na área, pois felizmente minha paixão era outra.
                 Depois de muito tempo pensando, decidi que em 2024 era hora de

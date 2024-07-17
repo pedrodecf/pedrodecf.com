@@ -39,15 +39,16 @@ export function Menu({ className }: MenuProps) {
 
   return (
     <header className={className}>
-      <nav className="w-custom-840 flex justify-center mb-3 py-1 border-solid border border-border rounded-lg shadow-custom-light">
+      <nav className="w-[840px] flex justify-center mb-3 py-1 border-solid border border-border rounded-lg shadow-custom-light max-[840px]:w-full max-[840px]:mb-1">
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem className="my-1">
+            <NavigationMenuItem className="my-1 max-[840px]:my-0">
               <Link href="/" passHref>
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${pathname === '/' ? 'bg-primary text-accent-foreground' : ''}`}
                 >
-                  <HomeIcon className="pr-1 mr-1" /> Início
+                  <HomeIcon className="pr-1 mr-1 max-[840px]:pr-0 max-[840px]:mr-0" />
+                  <span className="max-[840px]:hidden">Início</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -59,7 +60,8 @@ export function Menu({ className }: MenuProps) {
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${pathname === '/about' ? 'bg-primary text-accent-foreground' : ''}`}
                 >
-                  <PersonIcon className="pr-1 mr-1" /> Sobre mim
+                  <PersonIcon className="pr-1 mr-1 max-[840px]:pr-0 max-[840px]:mr-0" />
+                  <span className="max-[840px]:hidden">Sobre mim</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -71,8 +73,8 @@ export function Menu({ className }: MenuProps) {
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${pathname === '/skills' ? 'bg-primary text-accent-foreground' : ''}`}
                 >
-                  <RocketIcon className="pr-1 mr-1" />
-                  Tecnologias
+                  <RocketIcon className="pr-1 mr-1 max-[840px]:pr-0 max-[840px]:mr-0" />
+                  <span className="max-[840px]:hidden">Tecnologias</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -84,7 +86,8 @@ export function Menu({ className }: MenuProps) {
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${pathname === '/certificates' ? 'bg-primary text-accent-foreground' : ''}`}
                 >
-                  <ReaderIcon className="pr-1 mr-1" /> Certificados
+                  <ReaderIcon className="pr-1 mr-1 max-[840px]:pr-0 max-[840px]:mr-0" />{' '}
+                  <span className="max-[840px]:hidden">Certificados</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -96,8 +99,8 @@ export function Menu({ className }: MenuProps) {
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${pathname === '/contact' ? 'bg-primary text-accent-foreground' : ''}`}
                 >
-                  <EnvelopeClosedIcon className="pr-1 mr-1" />
-                  Contato
+                  <EnvelopeClosedIcon className="pr-1 mr-1 max-[840px]:pr-0 max-[840px]:mr-0" />
+                  <span className="max-[840px]:hidden">Contato</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -109,9 +112,9 @@ export function Menu({ className }: MenuProps) {
                 <NavigationMenuLink
                   className={`${navigationMenuTriggerStyle()} ${pathname === '/portfolio' ? 'bg-primary text-accent-foreground' : ''}`}
                 >
-                  <GitHubLogoIcon className="pr-1 mr-1 " />
-                  Portfólio
-                  <Badge className="absolute -top-2 -right-0.5 rounded-full px-1 shadow-none text-xs hover:bg-primary">
+                  <GitHubLogoIcon className="pr-1 mr-1 max-[840px]:pr-0 max-[840px]:mr-0 " />
+                  <span className="max-[840px]:hidden">Portfólio</span>
+                  <Badge className="absolute -top-2 -right-0.5 rounded-full px-1 shadow-none text-xs hover:bg-primary max-[840px]:hidden">
                     🔥
                   </Badge>
                 </NavigationMenuLink>

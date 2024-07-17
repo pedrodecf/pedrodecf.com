@@ -5,7 +5,7 @@ export default function Certificates() {
   return (
     <main className="flex flex-col justify-center mt-8 gap-5 bg-background">
       <h2 className="text-2xl font-bold">Certificados:</h2>
-      <FadeIn className="flex flex-wrap gap-3">
+      <FadeIn className="flex flex-wrap gap-3 max-[840px]:items-center max-[840px]:gap-1 max-[840px]:justify-around">
         <Frame
           title="Discover - Rocketseat"
           certificate="/certificates/certificate-1.jpg"

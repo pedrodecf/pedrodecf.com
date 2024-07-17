@@ -38,13 +38,15 @@ export default function RootLayout({
           disableTransitionOnChange
           enableColorScheme
         >
-          <div className="fixed top-5 right-5 z-50">
+          <div className="fixed top-5 right-5 z-50 max-[840px]:hidden">
             <ModeToggle />
           </div>
-          <div className="flex flex-col min-h-screen items-center">
-            <div className="w-[840px] flex-grow flex flex-col">
+          <div className="flex flex-col min-h-screen items-center px-4">
+            <div className="w-full max-w-[840px] flex-grow flex flex-col">
               <Menu className="mt-5" />
-              <main className="flex-grow mt-5 bg-background ">{children}</main>
+              <main className="flex-grow mt-5 bg-background max-[840px]:mt-0">
+                {children}
+              </main>
               <Footer className="mt-5 py-12 bg-background " />
             </div>
           </div>

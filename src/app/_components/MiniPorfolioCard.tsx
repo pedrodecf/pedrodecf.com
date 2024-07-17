@@ -32,7 +32,7 @@ export function MiniPortfolioCard({
         <CardContent>
           <p className="line-clamp-3">{description}</p>
         </CardContent>
-        <CardFooter className="flex items-center gap-2">
+        <CardFooter className="flex items-center gap-2 max-[840px]:items-start">
           {projectLink && (
             <Button asChild>
               <Link href={projectLink} target="_blank">

@@ -59,16 +59,15 @@ export default function Home() {
         experiência do usuário, performance, testes e escalabilidade. Sou proativo, 
         comprometido e busco constantemente aprimorar minhas habilidades técnicas."
       />
-      <div className="flex gap-6">
+      <div className="grid grid-cols-2 gap-5 max-[840px]:flex max-[840px]:flex-col">
         <CardBox
-          className="w-1/2 h-fit"
+          className="h-fit"
           title="Experiência Profissional"
           buttonText="Baixar meu currículo"
           buttonIcon="download"
           activity={jobs}
         />
         <CardBox
-          className="w-1/2"
           title="Formação"
           activity={education}
           link="/certificates"

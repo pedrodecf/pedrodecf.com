@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased relative',
+          'bg-background font-sans antialiased min-h-screen',
           fontSans.variable,
         )}
       >
@@ -35,12 +35,17 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
+          enableColorScheme
         >
-          <ModeToggle className="fixed top-5 right-5" />
-          <div className="w-custom-840 mt-5 mx-auto ">
-            <Menu />
-            {children}
-            <Footer />
+          <div className="fixed top-5 right-5 z-50">
+            <ModeToggle />
+          </div>
+          <div className="flex flex-col min-h-screen items-center">
+            <div className="w-[840px] flex-grow flex flex-col">
+              <Menu className="mt-5" />
+              <main className="flex-grow mt-5 bg-background ">{children}</main>
+              <Footer className="mt-5 py-12 bg-background " />
+            </div>
           </div>
         </ThemeProvider>
       </body>

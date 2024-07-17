@@ -21,7 +21,11 @@ import {
 import { Separator } from '../../components/ui/separator'
 import { Badge } from '../../components/ui/badge'
 
-export function Menu() {
+interface MenuProps {
+  className?: string
+}
+
+export function Menu({ className }: MenuProps) {
   const pathname = usePathname()
   const [isClient, setIsClient] = useState(false)
 
@@ -34,7 +38,7 @@ export function Menu() {
   }
 
   return (
-    <header className="flex justify-center">
+    <header className={className}>
       <nav className="w-custom-840 flex justify-center mb-3 py-1 border-solid border border-border rounded-lg shadow-custom-light">
         <NavigationMenu>
           <NavigationMenuList>

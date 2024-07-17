@@ -1,10 +1,11 @@
+import { FadeIn } from '../_components/animations/FadeIn'
 import { Frame } from '../_components/Frame'
 
 export default function Certificates() {
   return (
-    <main className="flex flex-col justify-center mt-8 gap-5">
+    <main className="flex flex-col justify-center mt-8 gap-5 bg-background">
       <h2 className="text-2xl font-bold">Certificados:</h2>
-      <div className="flex flex-wrap gap-3">
+      <FadeIn className="flex flex-wrap gap-3">
         <Frame
           title="Discover - Rocketseat"
           certificate="/certificates/certificate-1.jpg"
@@ -43,7 +44,7 @@ export default function Certificates() {
           title="Formação Next.js 14 - Alura"
           certificate="/certificates/certificate-9.jpg"
         />
-      </div>
+      </FadeIn>
     </main>
   )
 }

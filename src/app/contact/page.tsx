@@ -7,7 +7,7 @@ import { CardBox } from '../_components/CardBox'
 
 export default function Contact() {
   return (
-    <main className="flex flex-col justify-center mt-8 gap-5">
+    <main className="flex flex-col justify-center mt-8 gap-5 bg-background">
       <h2 className="text-2xl font-bold">Contato: </h2>
       <div className="flex flex-col gap-5">
         <CardBox

@@ -44,9 +44,7 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen items-center px-4">
             <div className="w-full max-w-[840px] flex-grow flex flex-col">
               <Menu className="mt-5" />
-              <main className="flex-grow mt-5 bg-background max-[840px]:mt-0">
-                {children}
-              </main>
+              <main className="flex-grow bg-background">{children}</main>
               <Footer className="mt-5 py-12 bg-background " />
             </div>
           </div>

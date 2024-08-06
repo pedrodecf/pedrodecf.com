@@ -17,6 +17,21 @@ export default function Home() {
     },
   ]
 
+  const volunteer = [
+    {
+      avatar: '/institutions/docunder-logo.jpg',
+      title: 'Desenvolvedor Back-end',
+      description: 'Docunder',
+      duration: '2024 - Atual',
+    },
+    {
+      avatar: '/institutions/leaf-pallete-logo.png',
+      title: 'Desenvolvedor Front-end',
+      description: 'Leaf Pallete',
+      duration: '2024 - Atual',
+    },
+  ]
+
   const education = [
     {
       avatar: '/institutions/fiap-logo.png',
@@ -31,9 +46,21 @@ export default function Home() {
       duration: '2024',
     },
     {
+      avatar: '/institutions/ita-logo.png',
+      title: 'Instituto Tecnológico de Aeronáutica',
+      description: 'Curso Orientação a Objetos com Java',
+      duration: '2024',
+    },
+    {
       avatar: '/institutions/rocketseat-logo.png',
       title: 'Rocketseat',
       description: 'Curso Ignite',
+      duration: '2023',
+    },
+    {
+      avatar: '/institutions/dio-logo.jpeg',
+      title: 'DIO',
+      description: 'Bootcamp Potência Tech iFood',
       duration: '2023',
     },
     {
@@ -51,22 +78,18 @@ export default function Home() {
         title="Sobre mim"
         link="/about"
         linkText="Saiba mais"
-        description="Me chamo Pedro de Freitas e sou desenvolvedor há 3 anos, 
-        especializado em desenvolvimento web. Tenho amplo domínio do ecossistema 
-        JavaScript e conhecimento em diversos frameworks. Trabalho com APIs REST e 
-        GraphQL, além de mensageria e microserviços. Utilizo práticas de clean code e 
-        SOLID, com experiência em bancos de dados SQL e NoSQL. Sempre priorizo a 
-        experiência do usuário, performance, testes e escalabilidade. Sou proativo, 
-        comprometido e busco constantemente aprimorar minhas habilidades técnicas."
+        description="Desenvolvedor full stack com mais de 3 anos de experiência, graduando em Engenharia de Software pela FIAP. Especializado no ecossistema JavaScript e Java com amplo domínio em frameworks e bibliotecas como Next.js, NestJS e Spring. Experiência avançada em TypeScript, React, Node.js, e bancos de dados SQL e NoSQL. Proativo e comprometido, sempre priorizo a experiência do usuário, performance, testes e escalabilidade. Atualmente estudando Golang."
       />
       <div className="grid grid-cols-2 gap-5 max-[840px]:flex max-[840px]:flex-col">
-        <CardBox
-          className="h-fit"
-          title="Experiência Profissional"
-          buttonText="Baixar meu currículo"
-          buttonIcon="download"
-          activity={jobs}
-        />
+        <div className="grid grid-cols-1 gap-4 max-[840px]:flex max-[840px]:flex-col">
+          <CardBox
+            title="Experiência Profissional"
+            buttonText="Baixar meu currículo"
+            buttonIcon="download"
+            activity={jobs}
+          />
+          <CardBox title="Trabalho Voluntário" activity={volunteer} />
+        </div>
         <CardBox
           title="Formação"
           activity={education}

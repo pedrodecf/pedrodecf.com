@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { FadeIn } from './animations/FadeIn'
 import { Separator } from '../../components/ui/separator'
 import { Badge } from '../../components/ui/badge'
@@ -10,30 +9,22 @@ export function AboutHeader() {
       <div className="w-fit pr-2 max-[840px]:text-center">
         <FadeIn as="h2" className="text-4xl font-bold">
           <span className="text-3xl">
-            Olá, muito prazer. <br />
+            Olá, muito prazer.
+            <br />
           </span>
           Me chamo{' '}
           <span className="text-primary font-extrabold">Pedro de Freitas!</span>
         </FadeIn>
         <FadeIn as="div">
-          <p className="mt-2 text-foreground font-medium opacity-80">
-            Nessa sessão você conhecerá um pouco mais da minha jornada, dos meus
-            gostos e hobbies. Tech skills você pode encontrar{' '}
-            <Link href="/skills" className="text-primary underline">
-              aqui.
-            </Link>
+          <p className="mt-2 font-medium text-opaque">
+            Sou um <b>programdor full stack</b>, conto com mais de três anos de
+            experiência em desenvolvimento de software.
           </p>
-          <p className="mt-2 text-foreground font-medium opacity-80 max-[840px]:hidden">
-            Caso queira ver projetos e portfólio, você irá encontrar{' '}
-            <Link href="/portfolio" className="text-primary underline">
-              aqui.
-            </Link>{' '}
-            Minhas redes sociais e e-mail estão na sessão{' '}
-            <Link href="/contact" className="text-primary underline">
-              contato.
-            </Link>
+          <p className="mt-2 font-medium text-opaque">
+            Nessa sessão você encontrará um breve resumo do início da minha
+            carreira como desenvolvedor e um pouco sobre minhas metas.
           </p>
-          <Separator className="mt-8 w-11/12 max-[840px]:hidden" />
+          <Separator className="mt-10 w-11/12 max-[840px]:hidden" />
         </FadeIn>
       </div>
 
@@ -51,48 +42,23 @@ export function AboutHeader() {
         />
 
         <Badge className="select-none rounded-full absolute -bottom-5 left-12 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-2">
-          <Image
-            src="/emojis/nodejs-ico.png"
-            alt="Memoji"
-            width={25}
-            height={25}
-          />
+          <Image src="/svg/nodejs.svg" alt="Memoji" width={25} height={25} />
         </Badge>
 
         <Badge className="select-none rounded-full absolute bottom-10 -left-5 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-3">
-          <Image
-            src="/emojis/react-ico.png"
-            alt="Memoji"
-            width={25}
-            height={25}
-          />
+          <Image src="/svg/react.svg" alt="Memoji" width={25} height={25} />
         </Badge>
 
         <Badge className="select-none rounded-full absolute top-12 -right-5 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-3">
-          <Image
-            src="/emojis/nextjs-ico.webp"
-            alt="Memoji"
-            width={25}
-            height={25}
-          />
+          <Image src="/svg/java.svg" alt="Memoji" width={25} height={25} />
         </Badge>
 
         <Badge className="select-none rounded-full absolute top-6 -left-1 px-1 py-1 bg-foreground shadow-custom-light hover:bg-foreground animate-float-1">
-          <Image
-            src="/emojis/javascript-ico.png"
-            alt="Memoji"
-            width={25}
-            height={25}
-          />
+          <Image src="/svg/golang.svg" alt="Memoji" width={25} height={25} />
         </Badge>
 
         <Badge className="select-none rounded-full absolute bottom-8 -right-3 bg-foreground px-1 py-1 shadow-custom-light hover:bg-foreground animate-float-2">
-          <Image
-            src="/emojis/typescript-ico.png"
-            alt="Memoji"
-            width={25}
-            height={25}
-          />
+          <Image src="/svg/spring.svg" alt="Memoji" width={25} height={25} />
         </Badge>
       </FadeIn>
     </section>

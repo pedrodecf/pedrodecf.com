@@ -17,6 +17,7 @@ import {
 } from '../../components/ui/dialog'
 import { Button } from '../../components/ui/button'
 import { FadeIn } from './animations/FadeIn'
+import { Badge } from '../../components/ui/badge'
 
 interface PortfolioCardProps {
   project: {
@@ -25,17 +26,19 @@ interface PortfolioCardProps {
     image: string
     projectLink?: string
     githubLink?: string
+    tags: string[]
   }
 }
 
 export function PortfolioCard({
-  project: { title, description, image, projectLink, githubLink },
+  project: { title, description, image, projectLink, githubLink, tags },
 }: PortfolioCardProps) {
   return (
     <FadeIn>
       <Card className="w-full">
         <Dialog>
           <CardHeader>
+            <h2 className="font-bold text-2xl mb-2">{title}</h2>
             <DialogTrigger>
               <Image
                 src={image}
@@ -63,8 +66,12 @@ export function PortfolioCard({
           </CardHeader>
         </Dialog>
         <CardContent>
-          <h2 className="font-bold text-lg">{title}</h2>
-          <p className="line-clamp-3">{description}</p>
+          {tags.map((tag, index) => (
+            <Badge key={index} className="mr-2 mb-2 " variant="outline">
+              {tag}
+            </Badge>
+          ))}
+          <p className="line-clamp-4">{description}</p>
         </CardContent>
         <CardFooter className="flex items-center gap-2 max-[840px]:items-start">
           {projectLink && (

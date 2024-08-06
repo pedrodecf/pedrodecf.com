@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FadeIn } from '../_components/animations/FadeIn'
 import { MiniPortfolioCard } from '../_components/MiniPorfolioCard'
 import { PortfolioCard } from '../_components/PorfolioCard'
@@ -5,77 +6,86 @@ import { PortfolioCard } from '../_components/PorfolioCard'
 export default function Portfolio() {
   const projects = [
     {
-      image: '/portfolio/screenshot-2.png',
-      title: 'Sofftek AI Chat',
+      image: '/portfolio/leaf-pallete.jpg',
+      title: 'Leaf Palette',
       description:
-        'Um chat alimentado por IA com o propósito de ajudar os profissionais de Service Desk do time da Softtek. Desenvolvido para o FIAP Challenge 2024.',
+        'Leaf Pallete, uma aplicação web colaborativa que serve como um guia prático para designers. Desenvolvimento de interfaces com TypeScript, React, Next.js 14 e Tailwind CSS. Prototipação de interfaces no Figma e revisão de pull requests.',
+      projectLink: 'https://www.leafpallete.com/',
+      githubLink: 'https://github.com/Leaf-Pallete',
+      tags: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS'],
+    },
+    {
+      image: '/portfolio/docunder.jpg',
+      title: 'Docunder',
+      description:
+        'Docunder, uma plataforma colaborativa de documentação técnica de hardware para instituições. Desenvolvimento utilizando TypeScript, Node.js e NestJS.',
+      projectLink: 'https://docunder.onrender.com/',
+      githubLink: 'https://github.com/Leaf-Pallete',
+      tags: ['TypeScript', 'Node.js', 'NestJS', 'PostgreSQL'],
+    },
+    {
+      image: '/portfolio/softtek-chat.jpg',
+      title: 'Softtek AI Chat',
+      description:
+        'Um chat alimentado por IA generativa com o propósito de ajudar os profissionais de Service Desk do time da Softtek. Desenvolvido para o FIAP Challenge 2024.',
       projectLink: 'https://youtu.be/ruH5agMbmcA',
-    },
-    {
-      image: '/portfolio/screenshot-4.jpg',
-      title: 'Orange Portfólio (Front-end)',
-      description:
-        'Desenvolvido durante o hackathon realizado pela FCamara, em uma squad de 4 membros, utiliza React, TypeScript, Material UI e Styled-Components.',
-      projectLink: 'https://orange-front-end.onrender.com',
-      githubLink: 'https://github.com/MatheusSanchez/orange-front',
-    },
-    {
-      image: '/portfolio/screenshot-3.jpg',
-      title: 'Orange Portfólio (Back-end)',
-      description:
-        'Desenvolvido durante o hackathon realizado pela FCamara, em uma squad de 4 membros, utiliza Node.js, AWS, Docker, Postgres e Prisma.',
-      githubLink: 'https://github.com/MatheusSanchez/orange-back',
+      tags: ['React', 'GPT-4o', 'Golang'],
     },
     {
       image: '/portfolio/screenshot-1.jpg',
-      title: 'AnimesOneHD',
+      title: 'Animes One HD',
       description:
-        'Criado em 2018, utilizava PHP e MySQL. Alcançou em seu auge quase 40 milhões de acessos mensais. Permanentemente fora do ar.',
+        'Criado em 2018, utilizava PHP e MySQL. Alcançou em seu auge quase 40 milhões de acessos mensais e mais de 2 milhões de usuários por mês. Permanentemente fora do ar.',
       projectLink: '/about',
+      tags: ['React', 'PHP', 'MySQL', 'WordPress'],
+    },
+    {
+      image: '/portfolio/screenshot-4.jpg',
+      title: 'Orange Portfólio',
+      description:
+        'Uma aplicação de rede social, desenvolvido durante o hackathon realizado pela FCamara, em uma squad de 4 membros, utiliza Node.js, AWS, Docker, Postgres e Prisma.',
+      projectLink: 'https://orange-front-end.onrender.com/',
+      githubLink: 'https://github.com/MatheusSanchez/orange-back',
+      tags: ['React', 'Node.js', 'AWS', 'PostgreSQL'],
+    },
+    {
+      image: '/portfolio/pedrodecf-com.jpg',
+      title: 'pedrodecf.com',
+      description:
+        'Meu site pessoal, desenvolvido com TypeScript, React, Next.js 14, Tailwind CSS e Vercel. Animações utilizam Framer Motion, e a biblioteca de componentes é o Shadcn.',
+      projectLink: 'https://pedrodecf.com/',
+      githubLink: 'https://github.com/pedrodecf/pedrodecf.com',
+      tags: ['Next.js 14', 'Tailwind CSS', 'Framer Motion'],
     },
   ]
 
   const otherProjects = [
     {
-      title: 'Gympass (Back-end)',
+      title: 'Gympass API',
       description:
-        'Api desenvolvida para simular um sistema de check-in de academias, utilizando Node.js, Docker, Fastify, Zod e PostgreSQL.',
+        'Api desenvolvida para simular um sistema de check-in de academias.',
       githubLink: 'https://github.com/pedrodecf/gympass-api',
+      tags: ['Node.js', 'TypeScript', 'Fastify', 'PostgreSQL'],
     },
     {
-      title: 'Find-a-friend (Back-end)',
-      description:
-        'Api desenvolvida para um sistema de adoção de animais, utilizando Node.js, Docker, Fastify, Zod e PostgreSQL.',
+      title: 'Find-a-friend API',
+      description: 'Api desenvolvida para um sistema de adoção de animais.',
       githubLink: 'https://github.com/pedrodecf/find-a-friend-api',
+      tags: ['Node.js', 'TypeScript', 'Fastify', 'PostgreSQL'],
     },
     {
-      title: 'Woovi Challenge (Front-end)',
+      title: 'Buildbox Challenge',
       description:
-        'Desafio para front-end, tela mobile estática usando React, JavaScript e Material UI. Simulando um sistema de pagamentos',
-      projectLink: 'https://woovi-frontend-enginner-challenge.vercel.app/',
-      githubLink:
-        'https://github.com/pedrodecf/woovi-frontend-enginner-challenge',
-    },
-    {
-      title: 'Ambulnzllc Challenge (Back-end)',
-      description:
-        'Desafio para back-end, api simples desenvolvida para um sistema de pizzaria, utilizando Node.js, Docker, Fastify, Zod e MySQL.',
-      githubLink: 'https://github.com/pedrodecf/ambulnzllc-fullstack-challenge',
-    },
-    {
-      title: 'Buildbox Challenge (Front-end)',
-      description:
-        'Desafio para front-end, tela de upload simples desenvolvida com TypeScript, React e Styled-Components.',
-      projectLink: 'https://buildboxwebchallenge-pedrodecf.netlify.app/',
+        'Desafio para front-end, tela de upload simples utilizando local storage.',
       githubLink:
         'https://github.com/pedrodecf/buildbox-web-developer-challenge',
+      tags: ['TypeScript', 'React', 'Styled-Components'],
     },
     {
-      title: 'Tcholas Odyssey The Game',
-      description:
-        'Um jogo feito para o curso da DIO e iFood, utiliza apenas HTML, CSS e JavaScript. Fiz toda a manipulação de imagens pelo PhotoShop',
-      projectLink: 'https://pedrodecf.github.io/tcholas-odyssey-the-game/',
-      githubLink: 'https://github.com/pedrodecf/tcholas-odyssey-the-game',
+      title: 'Jogo das Palavras Embaralhadas',
+      description: 'Desafio no curso Orientação a Objetos com Java, do ITA.',
+      githubLink: 'https://github.com/pedrodecf/embaralhador-java',
+      tags: ['Java', 'JUnit'],
     },
   ]
 
@@ -95,6 +105,16 @@ export default function Portfolio() {
           <MiniPortfolioCard key={index} project={project} />
         ))}
       </div>
+      <FadeIn as="p" className="text-center text-opaque">
+        e muitos outros{' '}
+        <Link
+          href="https://github.com/pedrodecf?tab=repositories"
+          target="_blank"
+          className="underline"
+        >
+          aqui...
+        </Link>
+      </FadeIn>
     </main>
   )
 }

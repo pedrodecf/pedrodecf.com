@@ -54,11 +54,7 @@ export function CardBox(props: CardProps) {
 
         {props.description && (
           <CardContent>
-            <FadeIn
-              as="p"
-              delay={0.2}
-              className="text-opaque font-medium max-[840px]:line-clamp-6"
-            >
+            <FadeIn as="p" delay={0.2} className="text-opaque font-medium">
               {props.description}
             </FadeIn>
           </CardContent>
@@ -70,7 +66,7 @@ export function CardBox(props: CardProps) {
               <FadeIn
                 as="div"
                 key={index}
-                className={`flex items-center gap-3 ${index < props.activity!.length - 1 ? 'mb-4' : ''}`}
+                className={`flex items-center gap-3 ${index < props.activity!.length - 1 ? 'mb-6' : ''}`}
                 delay={parseFloat(`0.${index + 2}`)}
                 startOnScrollIntersect={false}
               >
@@ -80,7 +76,7 @@ export function CardBox(props: CardProps) {
                     alt={item.title}
                     width={48}
                     height={48}
-                    className="rounded-full p-1 border-solid border border-border shadow-custom-light"
+                    className="rounded-full p-1 border-solid border border-border shadow-custom-light duration-300 hover:scale-110"
                   />
                   <AvatarFallback className="rounded-full p-1 w-12 h-12 border-solid border border-border shadow-custom-light" />
                 </Avatar>
@@ -101,7 +97,7 @@ export function CardBox(props: CardProps) {
         {props.buttonText && (
           <CardFooter>
             <Button asChild className="w-full bg-gradient-to-l from-">
-              <a href="/others/curriculo-pedrodecf.pdf" download>
+              <a href="/others/curriculo.pdf" download>
                 {props.buttonIcon === 'download' && (
                   <DownloadIcon className="mr-2 h-4 w-4" />
                 )}

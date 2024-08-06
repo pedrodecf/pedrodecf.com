@@ -10,6 +10,7 @@ import {
 } from '../../components/ui/card'
 import { Button } from '../../components/ui/button'
 import { FadeIn } from './animations/FadeIn'
+import { Badge } from '../../components/ui/badge'
 
 interface PortfolioCardProps {
   project: {
@@ -17,11 +18,12 @@ interface PortfolioCardProps {
     description: string
     projectLink?: string
     githubLink?: string
+    tags: string[]
   }
 }
 
 export function MiniPortfolioCard({
-  project: { title, description, projectLink, githubLink },
+  project: { title, description, projectLink, githubLink, tags },
 }: PortfolioCardProps) {
   return (
     <FadeIn>
@@ -30,7 +32,12 @@ export function MiniPortfolioCard({
           <h2 className="font-bold text-lg">{title}</h2>
         </CardHeader>
         <CardContent>
-          <p className="line-clamp-3">{description}</p>
+          {tags.map((tag, index) => (
+            <Badge key={index} className="mr-2 mb-2 " variant="outline">
+              {tag}
+            </Badge>
+          ))}
+          <p className="line-clamp-3 mt-2 -mb-2">{description}</p>
         </CardContent>
         <CardFooter className="flex items-center gap-2 max-[840px]:items-start">
           {projectLink && (

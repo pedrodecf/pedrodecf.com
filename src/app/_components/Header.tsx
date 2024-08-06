@@ -3,6 +3,17 @@ import { FadeIn } from './animations/FadeIn'
 import { Badge } from '../../components/ui/badge'
 
 export function Header() {
+  const tecnologias = [
+    'TypeScript',
+    'Node.js',
+    'NestJS',
+    'React',
+    'Next.js',
+    'Java',
+    'Spring',
+    'Go',
+  ]
+
   return (
     <section className="flex gap-6">
       <FadeIn
@@ -41,24 +52,13 @@ export function Header() {
           delay={0.2}
           className="flex flex-wrap gap-3 mt-2 max-[840px]:gap-1.5"
         >
-          <Badge variant="default" className="select-none">
-            React
-          </Badge>
-          <Badge variant="default" className="select-none">
-            Node.js
-          </Badge>
-          <Badge variant="default" className="select-none max-[840px]:hidden">
-            Next.js
-          </Badge>
-          <Badge variant="default" className="select-none max-[840px]:hidden">
-            NestJS
-          </Badge>
-          <Badge variant="default" className="select-none max-[840px]:hidden">
-            JavaScript
-          </Badge>
-          <Badge variant="default" className="select-none max-[840px]">
-            TypeScript
-          </Badge>
+          {tecnologias.map((tecnologia) => {
+            return (
+              <Badge key={tecnologia} variant="default" className="select-none">
+                {tecnologia}
+              </Badge>
+            )
+          })}
         </FadeIn>
       </div>
     </section>
